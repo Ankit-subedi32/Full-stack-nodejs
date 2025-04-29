@@ -29,4 +29,15 @@ const db ={}
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 
+db.books = require("./models/book.model")(sequelize,DataTypes)
+// yo chai uuta bata expot garyako lai import garyako aane direct function lai call garyako as arguments
+
+
+// migrate code halna parxa database table create garyako lai supabase ma halna ko laghi 
+
+sequelize.sync({alter : false}).then(() => 
+console.log("Mirgate vayo")
+)
+
+
 module.exports = db
