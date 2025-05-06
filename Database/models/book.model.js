@@ -1,30 +1,24 @@
+// books, bookName,bookPrice, bookAuthor, bookGenre
+const { sequelize } = require("../connection");
 
+const bookModel = (sequelize,DataTypes) => {
+  const Book =  sequelize.define("book",{
+    bookName : {
+        type : DataTypes.STRING,
+        allowNull : false
+    },
+    price : {
+        type : DataTypes.INTEGER,
+    },
+    bookAuthor : {
+        type : DataTypes.STRING,
 
-// books name ko table create garyara bookname, bookprice, bookauthor, bookgen  column haru create garne 
-
-const { DataTypes } = require("sequelize")
-
-const bookModel = (sequelize,Datatypes) => {
-
-   const Book = sequelize.define("book",{
-        bookName : {
-            type : DataTypes.STRING,
-            allowNull : false,
-        },
-        bookPrice : {
-            type : DataTypes.INTEGER,
-            allowNull : false,
-        },
-        bookAuthor : {
-            type : DataTypes.STRING,
-        },
-        bookGen : {
-            type : DataTypes.STRING,
-        },
-    })
-    return Book
-
+    },
+    bookGener : {
+        type : DataTypes.STRING
+    }
+  })
+  return Book
 }
-module.exports = bookModel
 
-
+module.exports = bookModel     // export default bookModel

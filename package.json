@@ -1,17 +1,17 @@
 {
-  "name": "digitalpathsala",
+  "name": "new-digital",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start" : " node --watch App.js "
+    "start": "node --watch app.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "express": "^5.1.0",
     "pg": "^8.15.6",
-    "sequelize": "^6.37.7",
-    "start": "^5.1.0"
+    "sequelize": "^6.37.7"
   }
 }
